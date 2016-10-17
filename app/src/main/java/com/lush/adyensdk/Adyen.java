@@ -9,6 +9,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.lush.adyensdk.cse.CardType;
 import com.lush.adyensdk.listener.OnPublicKeyDownloadListener;
 
 import org.json.JSONException;
@@ -83,5 +84,10 @@ public class Adyen
 	{
 		String host = (useTestBackend) ? "test" : "live";
 		return String.format("https://%s.adyen.com/hpp/cse/%s/json.shtml", host, token);
+	}
+
+	public CardType determineCardType(String longCardNumber)
+	{
+		return CardType.detect(longCardNumber);
 	}
 }
