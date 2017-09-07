@@ -1,6 +1,7 @@
 package com.lush.adyensdk.cse;
 
 import android.util.Base64;
+import android.util.Log;
 
 import java.math.BigInteger;
 import java.security.InvalidAlgorithmParameterException;
@@ -56,7 +57,7 @@ public class ClientSideEncrypter
 		}
 		catch (NoSuchAlgorithmException e)
 		{
-			e.printStackTrace();
+			Log.e(this.getClass().getSimpleName(), "Could not get KeyFactory instance", e);
 			return;
 		}
 
@@ -87,7 +88,7 @@ public class ClientSideEncrypter
 		}
 		catch (NoSuchProviderException e)
 		{
-			e.printStackTrace();
+			Log.e(this.getClass().getSimpleName(), "Could not get Cipher instance", e);
 		}
 
 		try

@@ -2,6 +2,7 @@ package com.lush.adyensdk;
 
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -64,7 +65,7 @@ public class Adyen
 				}
 				catch (JSONException e)
 				{
-					e.printStackTrace();
+					Log.e(this.getClass().getSimpleName(), "Could not get JSON string", e);
 					listener.onFailure();
 				}
 			}
