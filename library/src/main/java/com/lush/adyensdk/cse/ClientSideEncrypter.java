@@ -180,7 +180,7 @@ public class ClientSideEncrypter
 	/**
 	 * Generate a random Initialization Vector (IV)
 	 *
-	 * @param ivSize
+	 * @param ivSize iv size
 	 * @return the IV bytes
 	 */
 	private synchronized byte[] generateIV(int ivSize)
