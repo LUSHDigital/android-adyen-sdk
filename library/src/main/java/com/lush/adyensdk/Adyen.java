@@ -114,7 +114,7 @@ public class Adyen
 	 * @param card Encapsulation of the card data.
 	 * @param publicKey The public key for the environment.
 	 * @return The card data as it should be sent to the order store.
-	 * @throws EncrypterException
+	 * @throws EncrypterException exception
 	 */
 	public String serialise(CardPaymentData card, String publicKey) throws EncrypterException
 	{

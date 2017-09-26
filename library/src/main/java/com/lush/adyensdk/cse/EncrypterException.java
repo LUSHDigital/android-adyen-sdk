@@ -10,8 +10,8 @@ public class EncrypterException extends Exception
 	/**
 	 * Wrapping exception for all JCE encryption related exceptions
 	 *
-	 * @param message
-	 * @param cause
+	 * @param message message
+	 * @param cause cause
 	 */
 	public EncrypterException(String message, Throwable cause)
 	{
